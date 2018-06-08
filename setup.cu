@@ -977,7 +977,7 @@ void SETUP_CPML_Z(void){
 }
 
 void SETUP_Drude_CP(void){
-  real FERMI_VELOCITY = 1.39e8 / 100.0; //for silver and gold (m/s)
+  real FERMI_VELOCITY = 5e8 / 100.0; //for silver and gold (m/s)
   real D = 2.0;
   real C = 3.0*D/(D+2.0);
   real NL_COEFF = sqrt(C/D);
@@ -994,8 +994,8 @@ void SETUP_Drude_CP(void){
     WithConvection = 0;
     if(NONLOCAL == 3){
        Hydrodynamics = 1;
-       WithMagField = 0;
-       WithConvection = 0;
+       WithMagField = 1;
+       WithConvection = 1;
      }
      size_t extentD = NCELLX*NCELLY*NCELLZ*N_drude_poles*sizeof(real);
      size_t extentCP = NCELLX*NCELLY*NCELLZ*N_CP_poles*sizeof(real);
@@ -1345,7 +1345,7 @@ printf("HERE\n");
         d_3_d[i]= -1.0*e0/(me)/d_d[i]/dt;
         d_4_d[i]= 1.0*e0/(me)/d_d[i]/dt;
         d_5_d[i] = -1.0/d_d[i];
-        d_NL[i] = pow(N_EQ,1.0/3.0)*NONLOC*NONLOC/d_d[i];
+        d_NL[i] = pow(N_EQ,-2.0/3.0)*NONLOC*NONLOC/d_d[i];
         printf("%e,%e,%e,%e,%e,%e,%e,%e,%e\n",e0,me, C_E,d_d[i],d_1_d[i], d_2_d[i], d_3_d[i], d_4_d[i], d_5_d[i]);
         // printf("%e,%e,%e,%e,%e\n", cimag(d_1_d[i]), cimag(d_2_d[i]), cimag(d_3_d[i]), cimag(d_4_d[i]), cimag(d_5_d[i]));
         printf("%e\n",d_NL[i]);

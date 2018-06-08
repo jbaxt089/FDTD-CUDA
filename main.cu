@@ -1254,19 +1254,19 @@ if(Periodic_XY == 0){
     														for(n=0;n<N_CP_poles;n++){
     																				Px_cp[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]=C_1_cp[n]*Px_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]+C_2_cp[n]*Px_cp_n_1[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]+C_3_cp[n]*ex[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+C_4_cp[n]*ex_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+C_5_cp[n]*ex_n_1[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
     														}
-                                for(n=0;n<N_drude_poles;n++){
-                                  Px_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                                  Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                                  Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                                }
+                                // for(n=0;n<N_drude_poles;n++){
+                                //   Px_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                                //   Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                                //   Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                                // }
                                 for(n=0;n<N_CP_poles;n++){
                                   Px_cp_n_1[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)] = Px_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)];
                                   Px_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)] = Px_cp[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)];
                                 }
-
-                                NxHold = NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NxHold;
+                                //
+                                // NxHold = NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                // NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                // NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NxHold;
 
     													}
 
@@ -1572,18 +1572,18 @@ if(Periodic_XY == 0){
                                 Py_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)] = Py_cp[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)];
 
                               }
-                              for(n=0;n<N_drude_poles;n++){
-                                Py_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                                Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                                Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                              // for(n=0;n<N_drude_poles;n++){
+                              //   Py_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                              //   Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                              //   Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                              //
+                              //
+                              // }
 
 
-                              }
-
-
-                                                              NyHold = NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                                              NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                                              NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NyHold;
+                                                              // NyHold = NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                                              // NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                                              // NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NyHold;
 
     											}
     										}
@@ -1849,21 +1849,21 @@ if(Periodic_XY == 0){
     																		 Pz_cp[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]=C_1_cp[n]*Pz_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]+C_2_cp[n]*Pz_cp_n_1[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)]+C_3_cp[n]*ez[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+C_4_cp[n]*ez_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+C_5_cp[n]*ez_n_1[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
     												 }
 
-                             for(n=0;n<N_drude_poles;n++){
-                               Pz_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                               Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-                               Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
-
-                             }
+                             // for(n=0;n<N_drude_poles;n++){
+                             //   Pz_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                             //   Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                             //   Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                             //
+                             // }
                              for(n=0;n<N_CP_poles;n++){
 
                                Pz_cp_n_1[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)] = Pz_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)];
                                Pz_cp_n[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)] = Pz_cp[FourDMapD(i,j,k,n,N_CP_poles,NCELLZ,NCELLY)];
                              }
-
-                                                             NzHold = NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                                             NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
-                                                             NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NzHold;
+                                                             //
+                                                             // NzHold = NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                                             // NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                                                             // NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NzHold;
 
     			 							 }
                        }
@@ -2032,7 +2032,7 @@ if(Periodic_XY == 0){
                       else VcrossH = 0.0;
 
                          Px_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] = d_1_d[0]*Px_d_n[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] + d_2_d[0]*Px_d_n_1[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] +d_3_d[0]*ex[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]
-                         + d_4_d[0]*ex_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*(Grad_Div + Grad_Div2/N_EQ)/powf(ND1,1.0/3.0);
+                         + d_4_d[0]*ex_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*((Grad_Div*N_EQ + Grad_Div2)/powf(ND1,1.0/3.0) - 1.0/3.0 * pow(ND1,-4.0/3.0) *0.5*INV_DX* (NDx_prev[ThreeDMapD(i+1,j,k,NCELLZ,NCELLY)]-NDx_prev[ThreeDMapD(i-1,j,k,NCELLZ,NCELLY)])*(1/dt)*(NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]-NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]));
 
 
                     }
@@ -2155,7 +2155,7 @@ if(Periodic_XY == 0){
                        else VdotGrad = 0.0;
 
                      Py_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] = d_1_d[0]*Py_d_n[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] + d_2_d[0]*Py_d_n_1[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)]
-                     + d_3_d[0]*ey[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_4_d[0]*ey_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+ d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*(Grad_Div + Grad_Div2/N_EQ)/powf(ND1,1.0/3.0);
+                     + d_3_d[0]*ey[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_4_d[0]*ey_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+ d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*((Grad_Div*N_EQ + Grad_Div2)/powf(ND1,1.0/3.0) - 1.0/3.0 * pow(ND1,-4.0/3.0) *0.5*INV_DY* (NDy_prev[ThreeDMapD(i,j+1,k,NCELLZ,NCELLY)]-NDy_prev[ThreeDMapD(i,j-1,k,NCELLZ,NCELLY)])*(1/dt)*(NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]-NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]));
 
                     }
 
@@ -2265,7 +2265,7 @@ if(Periodic_XY == 0){
                      else VdotGrad = 0.0;
 
                      Pz_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] = d_1_d[0]*Pz_d_n[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] + d_2_d[0]*Pz_d_n_1[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)]
-                     + d_3_d[0]*ez[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_4_d[0]*ez_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+ d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*(Grad_Div + Grad_Div2/N_EQ)/powf(ND1,1.0/3.0);
+                     + d_3_d[0]*ez[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] + d_4_d[0]*ez_n[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]+ d_5_d[0]*(VdotGrad + (mu0*e0/me)*VcrossH/z0) + d_NL[0]*((Grad_Div*N_EQ + Grad_Div2)/powf(ND1,1.0/3.0) - 1.0/3.0 * pow(ND1,-4.0/3.0) *0.5*INV_DZ* (NDz_prev[ThreeDMapD(i,j,k+1,NCELLZ,NCELLY)]-NDz_prev[ThreeDMapD(i,j,k-1,NCELLZ,NCELLY)])*(1/dt)*(NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]-NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)]));
                   //
                   //   }
                   //
@@ -2275,6 +2275,61 @@ if(Periodic_XY == 0){
               }
     }
 
+
+
+    __global__ void UpdateHydro(real *Px_d,real *Px_d_n,real *Px_d_n_1,real *Px_d_n_2,real *Py_d,real *Py_d_n,real *Py_d_n_1,real *Py_d_n_2,real *Pz_d,real *Pz_d_n,real *Pz_d_n_1,real *Pz_d_n_2,real *NDx,real *NDx_prev,real *NDy,real *NDy_prev,real *NDz,real *NDz_prev,
+      real *hx,real *hy,real *hz,real *hxPrev,real *hyPrev,real *hzPrev,int WithConvection,int WithMagField,real N_EQ,int *mat_matrixX,int *mat_matrixY,int *mat_matrixZ,real dt,real dx,real dy,real dz,int NCELLX,int NCELLY,int NCELLZ,int first_medium,real *d_1_d,real *d_2_d,real *d_3_d,real *d_4_d,real *d_5_d,real *d_NL,int N_drude_poles,real mu0,real e0, real me,real z0){
+      int i,j,k,n;
+      real Vx1,Vx2,Vx3,Vy1,Vy2,Vy3,Vz1,Vz2,Vz3,Hx1,Hz1,Hy1,Hx2,Hz2,Hy2,Ex1,Ey1,Ez1,VdotGrad,VdotGrad2,VdotGrad3,DivV,VcrossH,VcrossH2,Pressure,ND1,ND2,ND3,Grad_Div,Grad_Div2;
+      real INV_DX,INV_DY,INV_DZ;
+      real NHold;
+      INV_DX = 1.0/dx;
+      INV_DY = 1.0/dy;
+      INV_DZ = 1.0/dz;
+      Grad_Div = 0.0;
+      Grad_Div2 =0.0;
+      ////#pragma omp parallel for collapse(3) // schedule(static)
+      // for(i=1;i<NCELLX-1;i++){
+      //     for(j=1;j<NCELLY-1;j++){
+      //             for(k=0;k<NCELLZ-1;k++){
+
+                      int idx = blockDim.x * blockIdx.x + threadIdx.x;
+
+                      i = idx / (NCELLZ*NCELLY);
+                      j = (idx - i*NCELLZ*NCELLY) / NCELLZ;
+                      k = idx - i*NCELLZ*NCELLY - j*NCELLZ;
+                      if(k<NCELLZ && i<NCELLX && j<NCELLY){
+                         // Pz_d_n_2[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] =  Pz_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] ;
+                         // Py_d_n_2[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] =  Py_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] ;
+                         // Px_d_n_2[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] =  Px_d[FourDMapD(i,j,k,0,N_drude_poles,NCELLZ,NCELLY)] ;
+                         for(n=0;n<N_drude_poles;n++){
+                           Px_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Px_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Px_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Px_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+
+                           Py_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Py_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Py_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Py_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+
+                           Pz_d_n_2[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Pz_d_n_1[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                           Pz_d_n[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)] = Pz_d[FourDMapD(i,j,k,n,N_drude_poles,NCELLZ,NCELLY)];
+                         }
+
+                         NHold = NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDz[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDz_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NHold;
+
+                         NHold = NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDy[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDy_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NHold;
+
+                         NHold = NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDx[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)];
+                         NDx_prev[ThreeDMapD(i,j,k,NCELLZ,NCELLY)] = NHold;
+
+                      }
+          }
 
 
   __global__  void UPDATE_e_inc(real* e_inc,real* h_inc,int inc_Length,real d_1D,real c0,real dt,real z0,real ep0,int t,real delay,real width,real pi,real f_0,int m0){
@@ -2443,8 +2498,8 @@ int main(void)
     real *freqdev;
     cudaMalloc(&freqdev,NUM_freq*sizeof(real));
 real lam_max,lam_min;
-lam_max = 700e-9;
-lam_min = 200e-9;
+lam_max = 500e-9;
+lam_min = 300e-9;
 
   if(WL_or_freq == 1){ //Wavelength plot
     for(i=0;i<NUM_freq;i++){
@@ -2871,7 +2926,6 @@ JzInf = (real *)malloc(sizeof(real));
        hxdev,hydev,hzdev,hxPrevdev,hyPrevdev,hzPrevdev,WithConvection,WithMagField,N_EQ,mat_matrixXdev,mat_matrixYdev,mat_matrixZdev,dt,dx,dy,dz,NCELLX,NCELLY,NCELLZ,first_medium,d_1_ddev,d_2_ddev,d_3_ddev,d_4_ddev,d_5_ddev,d_NLdev,N_drude_poles, mu0, e0,  me,z0);
        UpdateHydroPy<<<blocksPerGrid, threadsPerBlock>>>(eydev,ey_ndev,Px_ddev,Px_d_ndev,Px_d_n_1dev,Px_d_n_2dev,Py_ddev,Py_d_ndev,Py_d_n_1dev,Py_d_n_2dev,Pz_ddev,Pz_d_ndev,Pz_d_n_1dev,Pz_d_n_2dev,NDxdev,NDx_prevdev,NDydev,NDy_prevdev,NDzdev,NDz_prevdev,
          hxdev,hydev,hzdev,hxPrevdev,hyPrevdev,hzPrevdev,WithConvection,WithMagField,N_EQ,mat_matrixXdev,mat_matrixYdev,mat_matrixZdev,dt,dx,dy,dz,NCELLX,NCELLY,NCELLZ,first_medium,d_1_ddev,d_2_ddev,d_3_ddev,d_4_ddev,d_5_ddev,d_NLdev,N_drude_poles, mu0, e0,  me,z0);
-
          UpdateHydroPz<<<blocksPerGrid, threadsPerBlock>>>(ezdev,ez_ndev,Px_ddev,Px_d_ndev,Px_d_n_1dev,Px_d_n_2dev,Py_ddev,Py_d_ndev,Py_d_n_1dev,Py_d_n_2dev,Pz_ddev,Pz_d_ndev,Pz_d_n_1dev,Pz_d_n_2dev,NDxdev,NDx_prevdev,NDydev,NDy_prevdev,NDzdev,NDz_prevdev,
            hxdev,hydev,hzdev,hxPrevdev,hyPrevdev,hzPrevdev,WithConvection,WithMagField,N_EQ,mat_matrixXdev,mat_matrixYdev,mat_matrixZdev,dt,dx,dy,dz,NCELLX,NCELLY,NCELLZ,first_medium,d_1_ddev,d_2_ddev,d_3_ddev,d_4_ddev,d_5_ddev,d_NLdev,N_drude_poles, mu0, e0,  me,z0);
 }
@@ -2917,7 +2971,7 @@ JzInf = (real *)malloc(sizeof(real));
 
 
   //  Fourier_Transform();
- if(StaticField == 0 && t % 4 == 0){
+ if(StaticField == 0 && t % 1 == 0){
   ScattAbs <<<blocksPerGrid, threadsPerBlock>>>  (exdev,eydev,ezdev,hxdev,hydev,hzdev,NUM_freq,t,dt,freqdev,pi,XSTARTAbs,XENDAbs,YSTARTAbs,YENDAbs,ZSTARTAbs,ZENDAbs,XSTARTSca,XENDSca,YSTARTSca,YENDSca,ZSTARTSca,ZENDSca,XNEARAbs,XFARAbs,YNEARAbs,YFARAbs,ZNEARAbs,ZFARAbs,
    XNEARSca,XFARSca,YNEARSca,YFARSca,ZNEARSca,ZFARSca,ExTransformNearZAbsRedev,ExTransformNearZAbsImdev,EyTransformNearZAbsRedev,EyTransformNearZAbsImdev,HxTransformNearZAbsRedev,HxTransformNearZAbsImdev,HyTransformNearZAbsRedev,HyTransformNearZAbsImdev,
    ExTransformFarZAbsRedev,ExTransformFarZAbsImdev,EyTransformFarZAbsRedev,EyTransformFarZAbsImdev,HxTransformFarZAbsRedev,HxTransformFarZAbsImdev,HyTransformFarZAbsRedev,HyTransformFarZAbsImdev,
@@ -2932,6 +2986,12 @@ JzInf = (real *)malloc(sizeof(real));
    EyTransformNearXScaRedev,EyTransformNearXScaImdev,EzTransformNearXScaRedev,EzTransformNearXScaImdev,HyTransformNearXScaRedev,HyTransformNearXScaImdev,HzTransformNearXScaRedev,HzTransformNearXScaImdev,
    EyTransformFarXScaRedev,EyTransformFarXScaImdev,EzTransformFarXScaRedev,EzTransformFarXScaImdev,HyTransformFarXScaRedev,HyTransformFarXScaImdev,HzTransformFarXScaRedev,HzTransformFarXScaImdev,NCELLX,NCELLY,NCELLZ);
 }
+
+if(Hydrodynamics == 1){
+  UpdateHydro <<<blocksPerGrid, threadsPerBlock>>>(Px_ddev,Px_d_ndev,Px_d_n_1dev,Px_d_n_2dev,Py_ddev,Py_d_ndev,Py_d_n_1dev,Py_d_n_2dev,Pz_ddev,Pz_d_ndev,Pz_d_n_1dev,Pz_d_n_2dev,NDxdev,NDx_prevdev,NDydev,NDy_prevdev,NDzdev,NDz_prevdev,
+    hxdev,hydev,hzdev,hxPrevdev,hyPrevdev,hzPrevdev,WithConvection,WithMagField,N_EQ,mat_matrixXdev,mat_matrixYdev,mat_matrixZdev,dt,dx,dy,dz,NCELLX,NCELLY,NCELLZ,first_medium,d_1_ddev,d_2_ddev,d_3_ddev,d_4_ddev,d_5_ddev,d_NLdev,N_drude_poles, mu0, e0,  me,z0);
+}
+
 // cudaDeviceSynchronize();
         //
         // #ifdef DOUBLECOMPLEX
